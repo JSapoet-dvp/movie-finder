@@ -10,7 +10,7 @@ const SearchBar = (props) => {
                 onChange={props.handleChange}
                 className="search-container__input"
             />
-            <button type="submit" >search</button>
+            <button type="submit" ><span className="fas fa-search"> </span></button>
 
         </form>
     )

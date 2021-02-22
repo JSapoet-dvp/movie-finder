@@ -45,8 +45,11 @@ class Container extends React.Component {
 
         return (
             <div>
-                <Filter handleChange={this.handleChange} />
-                <SearchBar handleSearch={this.handleSearch} handleChange={this.handleChange} />
+                <header className="header2">
+                    <h1>Movie Finder</h1>
+                    <Filter handleChange={this.handleChange} />
+                    <SearchBar handleSearch={this.handleSearch} handleChange={this.handleChange} />
+                </header>
                 <List displayedMovies={displayedMovies} />
             </div>
         )

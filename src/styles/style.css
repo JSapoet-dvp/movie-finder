@@ -24,25 +24,56 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.header {
-  margin: 15px 0px 40px;
+input, button {
+  cursor: pointer;
 }
 
-.header h1 {
-  font-family: Bowlby One SC, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  padding: 10px;
+.header1 {
   background: #30475e;
+  height: 40px;
+}
+
+.header1 h3 {
+  display: none;
+  font-family: 'Bungee Shade', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header1 .fa-film {
+  padding: 15px 4px;
+}
+
+.header2 {
+  margin-bottom: 40px;
+  padding: 20px 0px;
+  background-image: url(../img/starry-sky2.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-attachment: fixed;
+  background-size: cover;
+  border-bottom: 1px solid white;
+}
+
+.header2 h1 {
+  font-family: Bowlby One SC, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 21px;
   text-shadow: 3px 3px 5px #222831;
+  margin: 20px 0px;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 1px #30475e;
 }
 
 .filter-container {
-  background: #16213e;
+  background: #30475e;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0px auto;
   padding: 10px 0;
   border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  font-size: 12px;
 }
 
 .filter-container label {
@@ -64,17 +95,18 @@ h2 {
 .search-container__input {
   border-radius: 8px;
   border: none;
-  padding: 0 5px;
+  padding-left: 10px;
   margin-right: 5px;
-  height: 50px;
+  height: 30px;
   outline: none;
+  width: 120px;
 }
 
 .search-container button {
   border-radius: 8px;
   border: none;
-  padding: 0 5px;
-  height: 50px;
+  height: 30px;
+  width: 30px;
   background: #f2a365;
   color: #1b1b1b;
   text-shadow: 1px 1px 1px white;
@@ -86,6 +118,10 @@ h2 {
   -webkit-filter: brightness(120%);
 }
 
+.search-container button .fa-search {
+  font-weight: bold;
+}
+
 .movie-list {
   width: 90%;
   margin: 0px auto;
@@ -94,23 +130,14 @@ h2 {
 .movie-list ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (250px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 250px);
-  grid-gap: 1rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.movie-list ul::after {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .movie-list ul li {
   list-style: none;
-  width: 250px;
+  width: 200px;
 }
 
 .movie-list ul li a {
@@ -120,7 +147,7 @@ h2 {
 }
 
 .movie-list ul li img {
-  height: 360px;
+  height: 250px;
   margin-top: 20px;
   border-radius: 8px;
   -webkit-box-shadow: 1px 1px 3px darkgray;
@@ -131,7 +158,67 @@ h2 {
   -webkit-box-shadow: 5px 5px 11px darkgray;
           box-shadow: 5px 5px 11px darkgray;
   -webkit-filter: brightness(120%);
-  height: 365px;
+  height: 260px;
   margin-bottom: -5px;
+}
+
+@media (min-width: 600px) {
+  .header1 {
+    text-align: right;
+    padding-right: 50px;
+    height: auto;
+  }
+  .header1 h3 {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .header1 h3:hover {
+    color: #dee7ec;
+  }
+  .header1 .fa-film {
+    padding: 15px 4px;
+  }
+  .header2 h1 {
+    font-size: 70px;
+    letter-spacing: 10px;
+  }
+  .filter-container {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .search-container__input {
+    padding: 0 10px;
+    height: 50px;
+    width: 250px;
+  }
+  .search-container button {
+    height: 50px;
+    width: 50px;
+  }
+  .movie-list ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (250px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 250px);
+    grid-gap: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .movie-list ul::after {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+  }
+  .movie-list ul li {
+    width: 250px;
+  }
+  .movie-list ul li img {
+    height: 360px;
+  }
+  .movie-list ul li img:hover {
+    height: 365px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

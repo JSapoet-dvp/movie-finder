@@ -8,7 +8,6 @@
 
 body {
     background: #222831;
-    // background: #200f21;
     font-family: Gothic A1, Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     text-shadow: 1px 1px 1px black;
@@ -24,32 +23,53 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.header {
-    margin: 15px 0px 40px;
+input, button {
+    cursor: pointer;
+}
+
+.header1 {
+    background: #30475e;
+    height: 40px;
+    & h3 {
+        display: none;
+        font-family: 'Bungee Shade', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        // font-family: Bowlby One SC, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    & .fa-film {
+        padding: 15px 4px;
+    }
+}
+
+.header2 {
+    margin-bottom: 40px;
+    // margin: 15px 0px 40px;
+    padding: 20px 0px;
+    background-image: url(../img/starry-sky2.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+    background-size: cover;
+    border-bottom: 1px solid white;
     & h1 {
         font-family: Bowlby One SC, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        padding: 10px;
-        background: #30475e;
-        // background: #f2a365;
-        // background: linear-gradient(to right, #f06a04, #ebbe9c); 
-        // background: linear-gradient(to right, red, white); 
-        // background: linear-gradient(to right, #f2a365, #30475e); 
-        // background: linear-gradient(to right, #5a7086, #30475e); 
+        // font-family: 'Bungee Shade', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 21px;
         text-shadow: 3px 3px 5px #222831;
+        margin: 20px 0px;
+        letter-spacing: 5px;
+        -webkit-text-stroke: 1px #30475e;
     }
 }
 
 .filter-container {
-    // background: #30475e;
-    // background: #f2a365;
-    // background: black;
-    // background: #0a192e;
-    // background: #162447;
-    background: #16213e;
+    background: #30475e;
     width: fit-content;
     margin: 0px auto;
     padding: 10px 0;
     border-radius: 10px;
+    display: grid;
+    text-align: left;
+    font-size: 12px;
     & label {
         margin: 0 20px;
         & input {
@@ -66,18 +86,17 @@ h2 {
     &__input {
         border-radius: 8px;
         border: none;
-        // border-radius: 20px 0 0 20px;
-        padding: 0 5px;
+        padding-left: 10px;
         margin-right: 5px;
-        height: 50px;
+        height: 30px;
         outline: none;
+        width: 120px;
     }
     & button {
         border-radius: 8px;
         border: none;
-        // border-radius: 0 20px 20px 0;
-        padding: 0 5px;
-        height: 50px;
+        height: 30px;
+        width: 30px;
         background: #f2a365;
         color: rgb(27, 27, 27);
         text-shadow: 1px 1px 1px white;
@@ -85,6 +104,9 @@ h2 {
         outline: none;
         &:hover {
             -webkit-filter: brightness(120%);
+        }
+        & .fa-search {
+            font-weight: bold;
         }
     }
 }
@@ -95,34 +117,24 @@ h2 {
     margin: 0px auto;
     & ul {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 250px);
-        grid-gap: 1rem;
-        justify-content: space-between;
-        // display: flex;
-        // flex-wrap: wrap;
-        // gap: 0 20px;
-        // justify-content: space-between;	
-        &::after {
-            // content: "";
-            flex: auto;
-          }
+        justify-content: center;
         & li {
             list-style: none;
-            width: 250px;
+            width: 200px;
                 & a {
                 text-decoration: none;
                 color: white;
                 text-align: center;
             }
             & img {
-                height: 360px;
+                height: 250px;
                 margin-top: 20px;
                 border-radius: 8px;
                 box-shadow: 1px 1px 3px darkgray;
                 &:hover {
                     box-shadow: 5px 5px 11px darkgray;
                     -webkit-filter: brightness(120%);
-                    height: 365px;
+                    height: 260px;
                     margin-bottom: -5px;
                 }
             }
@@ -130,3 +142,68 @@ h2 {
     }
 }
 
+@media	(min-width: 600px) {
+
+    .header1 {
+        text-align: right;
+        padding-right: 50px;
+        height: auto;
+        & h3 {
+            display: inline-block;
+            cursor: pointer;
+            &:hover {
+                color: #dee7ec;
+            }
+        }
+        & .fa-film {
+            padding: 15px 4px;
+        }
+    }
+
+    .header2 {
+        & h1 {
+            font-size: 70px;
+            letter-spacing: 10px;
+    }
+    }
+
+    .filter-container {
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .search-container {
+        &__input {
+            padding: 0 10px;
+            height: 50px;
+            width: 250px;
+        }
+        & button {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .movie-list {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 250px);
+            grid-gap: 1rem;
+            justify-content: space-between; 
+            &::after {
+                flex: auto;
+              }
+            & li {
+                width: 250px;
+                & img {
+                    height: 360px;
+                    &:hover {
+                        height: 365px;
+                    }
+                }
+            }
+        }
+    }
+
+}
