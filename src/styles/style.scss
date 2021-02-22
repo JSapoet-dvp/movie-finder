@@ -8,7 +8,8 @@
 
 body {
     background: #222831;
-    font-family: Gothic A1, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Kelly Slab, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    // font-family: Gothic A1, Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     text-shadow: 1px 1px 1px black;
     text-align: center;
@@ -33,7 +34,6 @@ input, button {
     & h3 {
         display: none;
         font-family: 'Bungee Shade', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        // font-family: Bowlby One SC, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     & .fa-film {
         padding: 15px 4px;
@@ -42,7 +42,6 @@ input, button {
 
 .header2 {
     margin-bottom: 40px;
-    // margin: 15px 0px 40px;
     padding: 20px 0px;
     background-image: url(../img/starry-sky2.jpg);
     background-repeat: no-repeat;
@@ -58,11 +57,16 @@ input, button {
         margin: 20px 0px;
         letter-spacing: 5px;
         -webkit-text-stroke: 1px #30475e;
+        & .fa-star {
+            color: #30475e;
+            -webkit-text-stroke: 2px white;
+        }
     }
 }
 
 .filter-container {
     background: #30475e;
+    opacity: 0.9;
     width: fit-content;
     margin: 0px auto;
     padding: 10px 0;
@@ -70,9 +74,11 @@ input, button {
     display: grid;
     text-align: left;
     font-size: 12px;
+    // font-family: Kelly Slab, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    // font-family: Baumans, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     & label {
         margin: 0 20px;
-        & input {
+    & input {
             margin-right: 6px;
             &:checked {
                 background-color: #f2a365;
@@ -128,14 +134,14 @@ input, button {
             }
             & img {
                 height: 250px;
-                margin-top: 20px;
+                margin: 20px 0px 5px;
                 border-radius: 8px;
                 box-shadow: 1px 1px 3px darkgray;
                 &:hover {
                     box-shadow: 5px 5px 11px darkgray;
                     -webkit-filter: brightness(120%);
                     height: 260px;
-                    margin-bottom: -5px;
+                    margin-bottom: 0px;
                 }
             }
         }
