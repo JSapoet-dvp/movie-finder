@@ -199,6 +199,9 @@ input, button {
               }
             & li {
                 width: 250px;
+                & a {
+                    font-size: 20px;
+                }
                 & img {
                     height: 360px;
                     &:hover {

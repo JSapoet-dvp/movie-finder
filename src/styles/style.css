@@ -216,6 +216,9 @@ input, button {
   .movie-list ul li {
     width: 250px;
   }
+  .movie-list ul li a {
+    font-size: 20px;
+  }
   .movie-list ul li img {
     height: 360px;
   }
